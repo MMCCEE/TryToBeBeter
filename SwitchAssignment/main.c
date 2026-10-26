@@ -6,11 +6,23 @@ int main(void){
 	
 	switch(op){
 		case 1: printf("%d",a+b);break;
+		
 		case 2: printf("%d",a-b);break;
+		
 		case 3: printf("%d",a*b);break;
-		case 4: printf("%d",a/b);break;
-		case 5: printf("%d",a%b);break;
-		default: printf("erroor");
+		
+		case 4: case 5: switch(b){
+			
+			case 0: printf("error");break;
+			
+			default: switch(op){
+				case 4: printf("%d",a/b);break;
+				case 5: printf("%d",a%b);
+			}
+			
+		}break;
+		
+		default: printf("error");
 	}
 	return 0;
 }
