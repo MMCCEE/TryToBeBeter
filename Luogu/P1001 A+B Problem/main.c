@@ -18,10 +18,6 @@ int main(void){
 			putchar('*');
 		}
 			
-		for(i=1;i<=(n-(Row*2-1))/2;i++){		/*打印每行后段的空格*/
-			putchar(' ');
-		}
-			
 		putchar('\n');
 			
 	}
@@ -39,10 +35,6 @@ int main(void){
 			
 		for(i=1;i<=Row*2-1;i++){		/*打印每行的[*]*/
 			putchar('*');
-		}
-			
-		for(i=1;i<=(n-(Row*2-1))/2;i++){		/*打印每行后段的空格*/
-			putchar(' ');
 		}
 		
 		putchar('\n');
