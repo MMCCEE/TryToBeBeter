@@ -6,9 +6,10 @@ int fib(int i);
 
 int main(){
 	int n;
+	int res;
 	
-	for(n=1;fib(n)<=1000;n++){
-		printf("%d:%d¡¢",n,fib(n));
+	for(n=1;(res=fib(n))<=1000;n++){
+		printf("%d:%d¡¢",n,res);
 	}
 	
 	return 0;
@@ -16,14 +17,8 @@ int main(){
 
 
 int fib(int i){
-	switch(i){
-		case 1:
-		case 2:{
-			return 1;
-		}
-		
-		default:{
-			return fib(i-1)+fib(i-2);
-		}
+	if(i==1 || i==2){
+		return 1;
 	}
+	return fib(i-1)+fib(i-2);
 }
